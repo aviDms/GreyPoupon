@@ -1,0 +1,16 @@
+# general things to ignore
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.so
+*~
+
+# environment
+.venv
+.idea
+
+# due to using tox and pytest
+.tox
+.cache
+/tests/grey_poupon_client.py
