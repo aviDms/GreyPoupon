@@ -10,7 +10,7 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -41,11 +41,12 @@ setup(
     keywords='gooddata gray pages setuptools development',
 
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    install_requires=[''],
+    install_requires=['requests', 'Click'],
 
     # $ pip install -e .[dev,test]
-    extras_require={
-        'dev': ['check-manifest'],
-        'test': ['coverage'],
-    }
+
+    entry_points = '''
+        [console_scripts]
+        gp=grey_poupon:gp_cli
+    ''',
 )

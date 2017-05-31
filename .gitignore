@@ -13,4 +13,4 @@ __pycache__/
 # due to using tox and pytest
 .tox
 .cache
-/tests/grey_poupon_client.py
+tests/*
